@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
 
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 * {
     box-sizing: border-box;
     padding:0;
@@ -17,6 +33,10 @@ body {
 
 main {
     width:90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0;
 }
 
 .card-container {
@@ -67,7 +87,7 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-end;
     padding-top: 15px;
     padding-bottom:15px;
 }
@@ -100,7 +120,7 @@ main {
 
 .bar {
     height:200px;
-    width: 30px;
+    width: 31px;
     border-radius: 5px;
     background-color: hsl(10, 79%, 65%);
 }
@@ -121,11 +141,26 @@ main {
     background-color: hsl(25, 47%, 15%);
     border-radius: 3px;
     color: white;
-    padding:3px 5px;
+    padding:4px 5px;
+    font-size: 10px;
 }
 
 .day, .footer .right-side h2, .footer .left-side h1 {
     color: gray;
     font-weight: 400;
     font-size: 15px;
+}
+
+@media screen and (min-width:385px) {
+    main {
+        width: 100%;
+    }
+
+    .card-container {
+        width:360px;
+    }
+
+    .bar {
+        width: 32.5px;
+    }
 }
