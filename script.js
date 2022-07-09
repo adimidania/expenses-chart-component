@@ -43,3 +43,16 @@ console.log(bars);
 Array.from(bars).forEach((element, index) => {
   element.style.height = data[index].amount * 2.5 + "px";
 });
+
+// When a certain bar is hovered.
+Array.from(bars).forEach((element, index) => {
+  element.addEventListener("click", function (event) {
+    cards[index].style.visibility = "visible";
+    element.style.opacity = "0.9";
+    for (i = 0; i < 7; i++) {
+      if (i != index) {
+        cards[i].style.visibility = "hidden";
+      }
+    }
+  });
+});

@@ -123,6 +123,7 @@ main {
     width: 31px;
     border-radius: 5px;
     background-color: hsl(10, 79%, 65%);
+    cursor:pointer;
 }
 
 .chart-item {
@@ -143,6 +144,7 @@ main {
     color: white;
     padding:4px 5px;
     font-size: 10px;
+    visibility: hidden;
 }
 
 .day, .footer .right-side h2, .footer .left-side h1 {
