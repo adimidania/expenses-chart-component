@@ -32,14 +32,12 @@ data = [
 
 // Initializing the amount of each day
 let cards = document.querySelectorAll(".price-card");
-console.log(cards);
 Array.from(cards).forEach((element, index) => {
   element.innerHTML = "$" + data[index].amount;
 });
 
 // Setting the height of each bar
 let bars = document.querySelectorAll(".bar");
-console.log(bars);
 Array.from(bars).forEach((element, index) => {
   element.style.height = data[index].amount * 2.5 + "px";
 });
